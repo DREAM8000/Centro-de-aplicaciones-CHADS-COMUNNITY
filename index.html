@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - A Pen by DREAM E</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicaciones de CHADS COMMUNITY</title>
+    <style>
+        body {
+            font-family: "Google Sans Display", Arial, Helvetica, sans-serif;
+            -webkit-text-size-adjust: 100%;
+            -webkit-font-smoothing: antialiased;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, #bde4ff, #ffffff);
+            display: flex;
+            flex-direction: column; /* Cambiamos la dirección a columna */
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Ajustamos la altura mínima */
+            overflow-x: hidden;
+            opacity: 0; /* Inicialmente, establecemos la opacidad en 0 */
+            animation: fadeIn 0.5s ease forwards; /* Aplicamos la animación de desvanecimiento */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .glassmorphic-box {
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            width: 80%; /* Cambiamos el ancho */
+            max-width: 600px; /* Establecemos un ancho máximo */
+            text-align: center;
+            margin: 20px auto; /* Centramos horizontalmente */
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .glassmorphic-box:hover {
+            transform: translateY(-10px);
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 24px;
+            font-size: 2rem;
+        }
+
+        p {
+            color: #34495e;
+            margin-bottom: 36px;
+        }
+
+        .button {
+            background: linear-gradient(45deg, #3498db, #ffffff);
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            cursor: pointer;
+            border-radius: 24px;
+            outline: none;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .button:hover {
+            background: linear-gradient(45deg, #3498db, #ffffff);
+        }
+
+        iframe {
+            width: 100%;
+            height: 300px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/915572173&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true&loop=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/henry-stickmin-805451431" title="Video Games OST [Out of Minutes]" target="_blank" style="color: #cccccc; text-decoration: none;">Video Games OST [Out of Minutes]</a> · <a href="https://soundcloud.com/henry-stickmin-805451431/super-mario-64-soundtrack-018-file" title="Super Mario 64 Soundtrack 018 - File Select" target="_blank" style="color: #cccccc; text-decoration: none;">Super Mario 64 Soundtrack 018 - File Select</a></div>
+
+    <div class="glassmorphic-box" onclick="openSite('https://www.wikipedia.org/')">
+        <h1>Wikipedia</h1>
+        <p>Explore the largest online encyclopedia.</p>
+        <a href="#" onmouseover="disableButton(this)" onmouseout="enableButton(this)" onclick="return false;" class="button">Visit</a>
+    </div>
+
+    <div class="glassmorphic-box" onclick="openSite('https://www.bbc.com/news')">
+        <h1>BBC News</h1>
+        <p>Stay informed with the latest news.</p>
+        <a href="#" onmouseover="disableButton(this)" onmouseout="enableButton(this)" onclick="return false;" class="button">Visit</a>
+    </div>
+
+    <div class="glassmorphic-box" onclick="openSite('https://www.coursera.org/')">
+        <h1>Coursera</h1>
+        <p>Enhance your skills with online courses.</p>
+        <a href="#" onmouseover="disableButton(this)" onmouseout="enableButton(this)" onclick="return false;" class="button">Visit</a>
+    </div>
+
+    <div class="glassmorphic-box" onclick="openSite('https://gemini.google.com/app')">
+        <h1>Gemini</h1>
+        <p>Habla con las tecnologias mas avanzadas de CHADS COMUNNITY.</p>
+        <a href="#" onmouseover="disableButton(this)" onmouseout="enableButton(this)" onclick="return false;" class="button">Visit</a>
+    </div>
+
+    <div class="glassmorphic-box" onclick="openSite('https://www.spotify.com/')">
+        <h1>Spotify</h1>
+        <p>Listen to your favorite music and podcasts.</p>
+        <a href="#" onmouseover="disableButton(this)" onmouseout="enableButton(this)" onclick="return false;" class="button">Visit</a>
+    </div>
+
+    <!-- Agrega más divs glassmorphic-box para más sitios web -->
+
+    <script>
+        function openSite(url) {
+            window.open(url, '_blank');
+        }
+
+        function disableButton(button) {
+            button.setAttribute('data-disabled', 'true');
+        }
+
+        function enableButton(button) {
+            button.removeAttribute('data-disabled');
+        }
+
+        document.addEventListener('click', function(event) {
+            if (event.target.getAttribute('data-disabled') === 'true') {
+                event.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
